@@ -13,12 +13,12 @@ import time
 """
 
 def get_sum_idx(nums:list, target:int) -> list:
-    for i, num in enumerate(nums):
+    for i, num in enumerate(nums): # add complexity
         if num > target:
             continue
         
         diff = target - num
-        if diff in nums[i + 1:]:
+        if diff in nums[i + 1:]: #add complexity
             j = nums.index(diff)
             
             return [i, j]
